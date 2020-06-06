@@ -4,13 +4,16 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 import Welcome from '../components/Welcome.vue'
 import Users from '../components/user/Users.vue'
+import Rights from '../components/power/Rights.vue'
+import Roles from '../components/power/Roles.vue'
+import Cate from '../components/goods/Cate.vue'
 
 Vue.use(VueRouter)
 
 // 解决ElementUI导航栏中的vue-router在3.0版本以上重复点菜单报错问题
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
-  return originalPush.call(this, location).catch(err => err)
+    return originalPush.call(this, location).catch(err => err)
 }
 
 const routes = [
@@ -22,7 +25,10 @@ const routes = [
         redirect: '/welcome',
         children: [
             { path: '/welcome', component: Welcome },
-            { path: '/users', component: Users }
+            { path: '/users', component: Users },
+            { path: '/rights', component: Rights },
+            { path: '/roles', component: Roles },
+            { path: '/categories', component: Cate }
         ]
     }
 ]

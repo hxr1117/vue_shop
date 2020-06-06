@@ -23,7 +23,10 @@ import {
     Tooltip,
     Pagination,
     Dialog,
-    MessageBox
+    MessageBox,
+    Tag,
+    Tree,
+    Cascader
 } from 'element-ui'
 
 Vue.use(Button)
@@ -48,6 +51,9 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Cascader)
 
 // 全局挂载，挂载到Vue的原型对象上
 Vue.prototype.$message = Message

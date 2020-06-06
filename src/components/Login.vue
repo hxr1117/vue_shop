@@ -6,7 +6,7 @@
                 <img src="../assets/logo.png" alt="" srcset="">
             </div>
             <!-- 表单 -->
-            <el-form ref="loginFormRef" class="login_form" v-model="loginForm" :rules="loginFormRules">
+            <el-form ref="loginFormRef" class="login_form" :model="loginForm" :rules="loginFormRules">
                 <el-form-item prop="username">
                     <el-input prefix-icon="el-icon-user" v-model="loginForm.username"></el-input>
                 </el-form-item>
