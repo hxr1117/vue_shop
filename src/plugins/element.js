@@ -26,7 +26,10 @@ import {
     MessageBox,
     Tag,
     Tree,
-    Cascader
+    Cascader,
+    Alert,
+    Tabs,
+    TabPane
 } from 'element-ui'
 
 Vue.use(Button)
@@ -54,6 +57,9 @@ Vue.use(Dialog)
 Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
 
 // 全局挂载，挂载到Vue的原型对象上
 Vue.prototype.$message = Message

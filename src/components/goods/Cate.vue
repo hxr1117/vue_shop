@@ -270,16 +270,12 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .zk-table {
   margin-top: 15px;
 }
 
 .el-cascader {
   width: 100%;
-}
-
-.el-cascader-panel {
-  height: 200px;
 }
 </style>
