@@ -38,7 +38,7 @@
                     label="价格"
                 ></el-table-column>
                 <el-table-column label="是否付款" prop="pay_status">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                         <el-tag v-if="scope.row.order_pay === '1'"
                             >已付款</el-tag
                         >
@@ -50,12 +50,12 @@
                     prop="is_send"
                 ></el-table-column>
                 <el-table-column label="下单时间" prop="create_time">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                         {{ scope.row.create_time | dateFormat }}
                     </template>
                 </el-table-column>
                 <el-table-column label="操作">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                         <el-button
                             type="primary"
                             icon="el-icon-edit"

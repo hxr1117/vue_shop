@@ -43,7 +43,7 @@
                     <!-- 动态表格 -->
                     <el-table :data="manyTableData">
                         <el-table-column type="expand">
-                            <template scope="scope">
+                            <template slot-scope="scope">
                                 <el-tag
                                     closable
                                     v-for="(item, i) in scope.row.attr_vals"
@@ -82,7 +82,7 @@
                             prop="attr_name"
                         ></el-table-column>
                         <el-table-column label="操作" scope="scope">
-                            <template scope="scope">
+                            <template slot-scope="scope">
                                 <el-button
                                     type="primary"
                                     icon="el-icon-edit"
@@ -110,7 +110,7 @@
                     <!-- 静态属性表格 -->
                     <el-table :data="onlyTableData">
                         <el-table-column type="expand">
-                            <template scope="scope">
+                            <template slot-scope="scope">
                                 <el-tag
                                     closable
                                     v-for="(item, i) in scope.row.attr_vals"
@@ -149,7 +149,7 @@
                             prop="attr_name"
                         ></el-table-column>
                         <el-table-column label="操作" scope="scope">
-                            <template scope="scope">
+                            <template slot-scope="scope">
                                 <el-button
                                     type="primary"
                                     icon="el-icon-edit"

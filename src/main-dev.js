@@ -13,16 +13,30 @@ import 'quill/dist/quill.core.css' // import styles
 import 'quill/dist/quill.snow.css' // for snow theme
 import 'quill/dist/quill.bubble.css' // for bubble theme
 
+// 导入进度条
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 Vue.use(VueQuillEditor /* { default global options } */)
 
 Vue.component(ZkTable.name, ZkTable)
 
 Vue.config.productionTip = false
+
+// 基于拦截器配置进度条
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// 在request拦截器中展示进度条NProgress.start()
+
 // 请求拦截
 axios.interceptors.request.use(config => {
     // console.log(config)
+    NProgress.start()
     config.headers.Authorization = window.sessionStorage.getItem('token')
+    return config
+})
+// 在response拦截器中展示NProgress.done()
+axios.interceptors.response.use(config => {
+    NProgress.done()
     return config
 })
 Vue.prototype.$http = axios

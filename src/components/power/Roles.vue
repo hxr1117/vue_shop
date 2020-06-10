@@ -20,7 +20,7 @@
             <el-table :data="rolesList">
                 <!-- 展开列 -->
                 <el-table-column type="expand">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                         <el-row
                             v-for="(item1, i1) in scope.row.children"
                             :key="item1.id"
@@ -100,7 +100,7 @@
                     prop="roleDesc"
                 ></el-table-column>
                 <el-table-column label="操作">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                         <el-button
                             type="primary"
                             icon="el-icon-edit"

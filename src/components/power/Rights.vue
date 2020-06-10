@@ -15,7 +15,7 @@
                 <el-table-column label="权限名称" prop="authName"></el-table-column>
                 <el-table-column label="对应访问路径" prop="path"></el-table-column>
                 <el-table-column label="权限等级" prop="level">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                         <el-tag v-if="scope.row.level === '0'">一级</el-tag>
                         <el-tag type="success" v-else-if="scope.row.level === '1'">二级</el-tag>
                         <el-tag type="warning" v-else>三级</el-tag>

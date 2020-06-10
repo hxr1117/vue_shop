@@ -43,12 +43,12 @@
                     label="数量"
                 ></el-table-column>
                 <el-table-column prop="add_time" label="创建时间">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                         {{ scope.row.add_time | dateFormat }}
                     </template>
                 </el-table-column>
                 <el-table-column label="操作">
-                    <template scope="scope">
+                    <template slot-scope="scope">
                         <el-button
                             type="primary"
                             icon="el-icon-edit"

@@ -29,7 +29,7 @@
                 :columns="columns"
                 index-text="#"
             >
-                <template slot="isok" scope="scope">
+                <template slot="isok" slot-scope="scope">
                     <i
                         class="el-icon-success"
                         v-if="!scope.row.isdeleted"
@@ -37,7 +37,7 @@
                     ></i>
                     <i class="el-icon-error" v-else style="color: red;"></i>
                 </template>
-                <template slot="order" scope="scope">
+                <template slot="order" slot-scope="scope">
                     <el-tag v-if="scope.row.cat_level === 0">一级</el-tag>
                     <el-tag v-if="scope.row.cat_level === 1" type="success"
                         >二级</el-tag
@@ -46,7 +46,7 @@
                         >三级</el-tag
                     >
                 </template>
-                <template slot="opt" scope="scope">
+                <template slot="opt" slot-scope="scope">
                     <el-button
                         type="primary"
                         icon="el-icon-edit"

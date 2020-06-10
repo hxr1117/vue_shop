@@ -334,7 +334,7 @@ export default {
 }
 </script>
 
-<style lang="less" scope>
+<style lang="less" scoped>
 .el-steps {
   margin-top: 15px;
 
